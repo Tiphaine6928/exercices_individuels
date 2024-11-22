@@ -13,3 +13,11 @@ const str2 = "J'utilise les expressions regulière pour retrouver des schémas d
 const exp2 = /de | des/g;
 
 console.log(str2.match(exp2).length);
+
+// Etape 3
+
+const str3 = "J'utilise les expressions regulière pour retrouver des schémas de text au sein d'une chaine de caractères."
+
+const exp3 = /de | des ? les/g;
+
+console.log(str3.match(exp3).length);

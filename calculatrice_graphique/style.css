@@ -58,6 +58,12 @@ body {
     opacity: 1;
 }
 
+.bleu {
+    color: white;
+    background: blue;
+    opacity: 1;
+}
+
 .trio {
     display: flex;
     column-gap: 15px;

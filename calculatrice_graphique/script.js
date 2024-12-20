@@ -38,3 +38,39 @@ function ajoutOperateur(opt) {
         }
     }
 }
+
+function calculer(){
+    if(valeur2) {
+        if(operateur == "+") {
+            resultat = parseFloat(valeur1) + parseFloat(valeur2);
+        } else if (operateur == "-") {
+            resultat = parseFloat(valeur1) - parseFloat(valeur2);
+        } else if (operateur == "*") {
+            resultat = parseFloat(valeur1) * parseFloat(valeur2);
+        } else if (operateur == "/") {
+            resultat = parseFloat(valeur1) / parseFloat(valeur2);
+        }
+
+        entete.innerText = valeur1 + operateur + valeur2 + "=" + resultat;
+    }
+}
+
+function effacer() {
+    if(resultat) {
+        valeur1 = "";
+        valeur2 = "";
+        operateur = "";
+        resultat = "";
+
+        entete.innerText = "0";
+    } else if(valeur2) {
+        valeur2 = valeur2.substr(0, valeur2.length - 1);
+        entete.innerText = valeur1 + operateur + valeur2;
+    } else if(operateur) {
+        operateur = "";
+        entete.innerText = valeur1;
+    } else if(valeur1) {
+        valeur1 = valeur1.substr(0, valeur1.length - 1);
+        entete.innerText = valeur1 ? valeur1 : "0";
+    }
+}
